@@ -1,4 +1,4 @@
-@startXYZ
+@startXYZ testdiag
 object Provider01 {
   Hotel Management System Check-In
 }
