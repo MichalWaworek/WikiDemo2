@@ -1,0 +1,83 @@
+@startuml
+object Provider01 {
+  Hotel Management System Check-In
+}
+object Provider02 {
+  Hotel Management System House-Maid
+}
+object Provider03 {
+  Car Wash Management System
+}
+
+object Retailer01 {
+  Redis&Son-In
+}
+object PointOfSale01 {
+  Redis Hotel 1
+}
+object PointOfSale02 {
+  Redis Hotel 2
+}
+map PayAccount01 {
+  Operator => Odlewy28
+  Owner => Retailer01
+}
+
+object Retailer02 {
+  Silver Line Beach Hotels
+}
+object PointOfSale04 {
+  Silver Line Hotel
+}
+object PointOfSale05 {
+  5 x Beach Hotels
+}
+object PointOfSale06 {
+  Wash&Drive
+}
+map PayAccount02 {
+  Operator => PayINot
+  Owner => Retailer02
+}
+map PayAccount03 {
+  Operator => PayINot
+  Owner => Retailer02
+}
+
+map UserAccount01 {
+  Admin => Provider01
+  Reader => Retailer01
+}
+map UserAccount02 {
+  Admin => Retailer01
+}
+map UserAccount03 {
+  Admin => Provider03, Retailer02
+}
+
+PointOfSale01      o--            Retailer01
+PointOfSale02      o--            Retailer01
+Provider01         o--            PointOfSale01
+Provider01         o--            PointOfSale02
+PayAccount01       o--            Retailer01
+PointOfSale01      o--            PayAccount01
+PointOfSale02      o--            PayAccount01
+Provider01         o--            UserAccount01
+Retailer01         o--            UserAccount01
+Retailer01         o--            UserAccount02
+
+PointOfSale04      o--            Retailer02
+PointOfSale05      o--            Retailer02
+Provider01         o--            PointOfSale04
+Provider02         o--    "5"     PointOfSale05
+PayAccount02       o--            Retailer02
+PointOfSale04      o--            PayAccount02
+PointOfSale05      o--            PayAccount02
+
+PointOfSale06      o--            Retailer02
+Provider03         o--            PointOfSale06
+PayAccount03       o--            Retailer02
+PointOfSale06      o--            PayAccount03
+Provider03         o--            UserAccount03
+Retailer02         o--            UserAccount03
+@enduml
