@@ -1,0 +1,18 @@
+name: Render PlantUML
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render PlantUML to wiki
+        uses: frederikheld/render-plantuml-to-wiki-action@v1.0.1
+        with:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+          INPUT_DIR: 'plant'
+          OUTPUT_DIR: 'plant/out'
