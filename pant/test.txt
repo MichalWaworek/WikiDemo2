@@ -1,4 +1,4 @@
-@startXYZ testdiag
+@startxyz testdiag
 object Provider01 {
   Hotel Management System Check-In
 }
@@ -80,4 +80,4 @@ PayAccount03       o--            Retailer02
 PointOfSale06      o--            PayAccount03
 Provider03         o--            UserAccount03
 Retailer02         o--            UserAccount03
-@endXYZ
+@endxyz
