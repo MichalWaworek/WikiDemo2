@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Render PlantUML to wiki
         uses: frederikheld/render-plantuml-to-wiki-action@v1.0.2
         with:
