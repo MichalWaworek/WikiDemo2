@@ -14,5 +14,5 @@ jobs:
         uses: frederikheld/render-plantuml-to-wiki-action@v1.0.2
         with:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
-          INPUT_DIR: 'pant'
+          INPUT_DIR: 'WikiDemo2/pant'
           OUTPUT_DIR: 'pant/out'
