@@ -1,6 +1,6 @@
 @startuml
 object Provider01 {
-  Hotel Management System Check-In
+  Hotel Management System Check-OUT
 }
 object Provider02 {
   Hotel Management System House-Maid
