@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Render PlantUML to wiki
-        uses: frederikheld/render-plantuml-to-wiki-action@v1.0.1
+        uses: frederikheld/render-plantuml-to-wiki-action@v1.0.2
         with:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
           INPUT_DIR: 'pant'
